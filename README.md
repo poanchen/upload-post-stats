@@ -1,1 +1,7 @@
 # upload-post-stats
+
+Make sure each blog post in https://poanchen.github.io/blog have stats (for example, total views).
+
+## Why is this useful?
+
+When user click on a blog post, they should be able to know how popular the blog post is and how many views it has been generated. One metric that is useful in this case is total views. To get the total views calculated on your own isn't easy, not only that, you also need to give user a correct number of views. Here is where the [Google Analytics](https://analytics.google.com) comes into play, I have been using Google Analytics to track my website performance since day one, all the data is there, I just need to call the Google's [Core Reporting API](https://developers.google.com/analytics/devguides/reporting/core/v3/) to get the total view for each post, and then show it to the user. In a nutshell, this is how it works, check out the site's sitemap.xml to get a list of blog posts, call the Google's API to get views, store it as JSON and then simply upload the file to [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/). And, of course, we need to do this once a day. (To keep the data fresh with one day old data) Of course, as a Software Engineer, we love automation. We love writing code that will help use to avoid doing the manul work. With automation, all these can be done once and for all. How does that sound?
