@@ -28,7 +28,6 @@ config['json_file_name'] = "fileName.json"
 
 # XML
 config['xml_url'] = 'urlToYourXml'
-config['xml_file_name'] = 'yourFileName'
 
 # Google's Core Reporting API
 config['client_secret_file_name'] = 'yourFileName.json'
